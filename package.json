@@ -1,0 +1,33 @@
+{
+  "name": "camps_world_final",
+  "version": "1.0.0",
+  "description": "a simple schoole app for champs world \t",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orishv321/camps_world_final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orishv321/camps_world_final/issues"
+  },
+  "homepage": "https://github.com/Orishv321/camps_world_final#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13",
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
