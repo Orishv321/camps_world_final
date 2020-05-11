@@ -3,7 +3,7 @@ export let Login = (data) => {
   return (dispatch) => {
     // console.table(data);
     axios
-      .post("http://localhost:3003/api/v/login", data)
+      .post("/api/v/login", data)
       .then((result) => {
         // console.log(result.data);
         localStorage.setItem("Name", result.data.name);

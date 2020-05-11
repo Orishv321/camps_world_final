@@ -3,7 +3,7 @@ import axios from "axios";
 export const postingAdminissionForm = (data) => {
   return (dispatch) => {
     axios
-      .post("http://localhost:3003/api/v/adminission", data)
+      .post("/api/v/adminission", data)
       .then((result) => {
         // console.log(result.data);
         dispatch({ type: "POST_ADMINISSION", payload: result.data.message });
@@ -18,7 +18,7 @@ export const postingAdminissionForm = (data) => {
 export const getingAdminissionData = () => {
   return (dispatch) => {
     axios
-      .get("http://localhost:3003/api/v/adminission")
+      .get("/api/v/adminission")
       .then((result) => {
         // console.table(result.data);
         dispatch({ type: "GET_ADMINISSION", payload: result.data.data });
@@ -33,7 +33,7 @@ export const acceptAdminission = (id, email) => {
   let data = { id: id, email: email, type: 1 };
   return (dispatch) => {
     axios
-      .put("http://localhost:3003/api/v/adminission", data)
+      .put("/api/v/adminission", data)
       .then((result) => getingAdminissionData()(dispatch))
       .catch((err) => {
         console.log(err);
@@ -46,7 +46,7 @@ export const rejectAdminission = (id, email, accept) => {
 
   return (dispatch) => {
     axios
-      .put("http://localhost:3003/api/v/adminission", data)
+      .put("/api/v/adminission", data)
       .then((result) => getingAdminissionData()(dispatch))
       .catch((err) => {
         console.log(err);

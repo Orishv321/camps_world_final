@@ -18,7 +18,7 @@ const getContacts = () => {
 const postContacts = (data) => {
   return (dispatch) => {
     axios
-      .post("http://localhost:3003/api/v/feedback", data)
+      .post("/api/v/feedback", data)
       .then((result) => {
         getContacts()(dispatch);
         dispatch({ type: "ADMINISSION_ADDED", payload: result.data.message });
