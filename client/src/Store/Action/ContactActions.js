@@ -2,7 +2,7 @@ import axios from "axios";
 const getContacts = () => {
   return (dispatch) => {
     axios
-      .get("http://localhost:3003/api/v/feedback")
+      .get("/api/v/feedback")
       .then((result) => {
         // console.log("form get");
         // console.log(result.data.data);
